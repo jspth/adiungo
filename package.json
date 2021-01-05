@@ -1,0 +1,20 @@
+{
+  "name": "adiungo",
+  "version": "1.0.0",
+  "description": "Coyotiv Learning Project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jspth/adiungo.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jspth/adiungo/issues"
+  },
+  "homepage": "https://github.com/jspth/adiungo#readme"
+}

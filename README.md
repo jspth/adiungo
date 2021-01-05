@@ -1,2 +1,2 @@
 # adiungo
-Coyotiv Project
+Coyotiv Learning Project

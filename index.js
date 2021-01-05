@@ -34,6 +34,7 @@ class User {
    }
   }
   
+  
   const julia = new User('Julia')
   const caro = new User('Caro')
   const regina = new User('Regina')

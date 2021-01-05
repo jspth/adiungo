@@ -1,13 +1,15 @@
  const User = require('./user');
  const Event = require('./event');
  
-  const julia = new User('Julia');
-  const caro = new User('Caro');
-  const regina = new User('Regina');
+ const julia = new User('Julia');
+ const caro = new User('Caro');
+ const regina = new User('Regina');
   
-  const event = new Event('Climate change', 'Hamburg');
+ const event = new Event('Climate change', 'Hamburg');
   
-  julia.organizeEvent(event);
+ 
+ 
+ julia.organizeEvent(event);
   caro.bookmarkEvent(event);
   regina.bookmarkEvent(event);
   

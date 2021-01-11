@@ -42,4 +42,7 @@
     "lint-staged": "^10.5.3",
     "prettier": "^2.2.1"
   },
+  "dependencies": {
+    "colors": "^1.4.0"
+  }
 }

@@ -1,13 +1,11 @@
 {
   "name": "adiungo",
   "version": "0.0.1",
-  "version": "1.0.0",
   "description": "Coyotiv Learning Project",
   "main": "src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "lint-staged",
-    "test": "echo \"Error: no test specified\" && exit 1"
     "start": "node src/index.js"
   },
   "husky": {

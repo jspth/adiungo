@@ -1,0 +1,37 @@
+@startuml
+
+left to right direction
+
+skinparam Shadowing false
+skinparam Monochrome true
+
+actor "An app User" as user
+actor "Other users" as user2
+
+package "Profile"{
+    usecase "Create profile" as UC1
+}
+
+package "Ideas"{
+    usecase "Create idea" as UC2
+    usecase "Bookmark idea" as UC3
+    usecase "Rate idea" as UC4
+}
+
+package "Event"{
+    usecase "Create event" as UC5
+    usecase "Bookmark event" as UC6
+}
+
+user --> UC1
+user --> UC2
+user --> UC3
+user --> UC4
+user --> UC5
+user --> UC6
+
+user2 ---> UC3
+user2 ---> UC4
+user2 ---> UC6
+
+@enduml

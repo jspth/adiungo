@@ -1,10 +1,12 @@
 class Event {
-    constructor(topic, location){
-     this.topic = topic
-     this.location = location
-     this.organizedBy = []
-     this.bookmarkedBy = []
-    }
-   }
+  constructor(idea, location, date, userName) {
+    this.connectedIdea = idea.ideaName
+    this.location = location
+    this.date = date
+    this.details = 'Description of details for the event - where to meet, what to bring etc.'
+    this.createdBy = userName
+    this.bookmarkedBy = []
+  }
+}
 
-   module.exports = Event;
+module.exports = Event

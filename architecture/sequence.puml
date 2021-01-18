@@ -1,0 +1,21 @@
+@startuml
+
+skinparam Shadowing false
+skinparam Monochrome true
+
+actor User
+participant "User" as A
+participant "Idea" as B
+participant "Event" as C
+
+User -> A: Create idea
+activate A
+A -> B: Create entry
+activate B
+
+User -> A: Create event
+activate A
+A -> C: Create entry
+activate C
+
+@enduml

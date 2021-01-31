@@ -1,0 +1,17 @@
+@startuml
+
+skinparam Shadowing false
+skinparam Monochrome true
+
+start
+
+:Create Idea;
+:Create Event;
+stop
+
+start
+:Bookmark Idea;
+:
+stop
+
+@enduml

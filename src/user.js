@@ -1,24 +1,37 @@
 class User {
-  constructor(name) {
-    this.name = name
-    this.interests = []
-    this.events = []
-    this.bookmarked = []
+  constructor(name, email) {
+    this.userName = name
+    this.email = email
+    this.createdIdeas = []
+    this.bookmarkedIdeas = []
+    this.createdEvents = []
+    this.bookmarkedEvents = []
   }
 
-  addInterests(interest) {
-    this.interests.push(interest)
+  createIdea(idea) {
+    this.createdIdeas.push(idea)
   }
 
-  organizeEvent(event) {
-    this.events.push(event)
-    event.organizedBy.push(this)
+  // Does not work yet
+  bookmarkIdea(idea) {
+    this.bookmarkedIdeas.push(idea)
+  }
+
+  upVoteIdea(idea) {
+    idea.upVotes = ++idea.upVotes
+  }
+
+  downVoteIdea(idea) {
+    idea.downVotes = ++idea.downVotes
+  }
+
+  createEvent(event) {
+    this.createdEvents.push(event)
   }
 
   bookmarkEvent(event) {
-    this.bookmarked.push(event)
-    event.bookmarkedBy.push(this)
+    this.bookmarkedEvents.push(event)
+    event.bookmarkedBy.push(this.userName)
   }
 }
-
 module.exports = User

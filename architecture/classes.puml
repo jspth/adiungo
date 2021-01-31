@@ -1,0 +1,53 @@
+@startuml Adiungo Class Diagram
+
+skinparam Shadowing false
+skinparam Monochrome true
+
+class User {
+    userName: string
+    email: string
+    createdIdeas: Array
+    bookmarkedIdeas: Array
+    createdEvents: Array
+    bookmarkedEvents: Array
+    constructor(name: string, email: string)
+    createIdea(idea: Idea)
+    bookmarkIdea(idea: Idea)
+    upVoteIdea(idea: Idea)
+    downVoteIdea(idea: Idea)
+    createEvent(event: Event)
+    bookmarkEvent(event: Event)
+}
+
+class Idea{
+    ideaName: string
+    description: string
+    upVotes: number
+    downVotes: number
+    createdBy: string
+    relatedEvents: Array
+}
+
+class Event {
+    connectedIdea: string
+    location: string
+    date: string
+    details: string
+    createdBy: string
+    bookmarkedBy: Array
+    constructor(idea: Idea, location: string, date: string, userName: string)
+}
+
+User "1" --> "0..*" Idea : creates, upvotes, downvotes, bookmarks
+
+Idea "1" --> "0..*" User : bookmarked by
+
+User --> Event : creates, bookmarks
+
+Event --> "1" User : created by
+
+Idea --> "0..*" Event : created from
+
+Event --> "1" Idea : based on
+
+@enduml
